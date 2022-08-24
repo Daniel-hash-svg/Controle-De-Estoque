@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Estoque- Cadastro de novos produtos</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">     
+    <script src="funcoes.js"></script> 
+  </head>
+
+  <body onload="carregarTotalEstoque('totalEstoque')">
+    <!--  o onload faz com que, logo ao abrir e carregar a página, a primeira coisa a fazer é chamar essa função.-->
+
+    <!--  Carrinho de compras -->
+    <div class="carrinho">
+       <img src="./shopping_cart_icon_143698.png">
+       <p>Itens no estoque: <span id="totalEstoque">0</span></p> <!-- esse id aqui vai ser passado como parâmetro na função atualizarTotalEstoque-->
+
+    </div>
+
+    <!--  Formulário: Nome, código e quantidade de produtos -->
+     <form>
+       <table>
+         <caption>Cadastro de novos produtos.</caption>
+         <!-- Nome do produto -->
+         <tr>
+            <td class="alinharRotulos">Nome do produto:</td>
+            <td><input id="txtNomeProduto" type="text"></td>
+         </tr>
+
+         <!-- Código do produto  -->
+         <tr>
+            <td class="alinharRotulos">Código do produto:</td>
+            <td><input id="txtCodProduto" type="text"></td>
+         </tr>
+
+         <!-- Quantidade do produto  -->
+         <tr>
+            <td class="alinharRotulos">Quantidade do produto:
+
+            </td>
+            <td>
+               <select id="quantidadeProduto">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+               </select>
+               <!-- esses values serão usados no arquivo javascript pra pegar o valor do select. -->
+            </td>
+         </tr>
+             
+         <!-- Botões -->
+         <tr>
+          <td colspan="2" align="center">
+            <input type="button" class="alinhaBtns" onclick="validarProduto('txtNomeProduto', 'txtCodProduto', 'quantidadeProduto')"  value="Cadastrar">
+            <!-- chamo a função passando 3 ids como parâmetro.  No JS essa função vai chamar outra função, e essa outra função chama uma terceira função. -->
+            <input type="button" class="alinhaBtns" onclick="window.open('verEstoque.html', '_self')"  value="Ver estoque">
+            <!-- abro essa outra página -->
+            <input type="reset" class="alinhaBtns"  value="Limpar">
+            <!-- limpo os valores digitados que ainda não foram cadastrados. -->
+          </td>
+         </tr>
+
+       </table>
+     </form>
+
+
+  </body> 
+</html>

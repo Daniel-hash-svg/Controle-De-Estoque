@@ -1,0 +1,51 @@
+
+body {
+    background-color: rgb(192, 255, 200);
+}
+
+img {
+    height: 55px;
+}
+
+table {
+    clear: both;  
+    background-color: #17a2b8;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+caption {
+    color: rgb(213,97,100);
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.alinharRotulos {
+    text-align: right;
+}
+
+.alinhaBtns {
+    background-color: black;
+    color: white;
+    width: 30%;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrinho {
+    width: 300px;
+    float: right; /* deixa esse carrinho na parte direita */
+   
+}
+
+.carrinho p {
+    display: inline; /* deixa a tag p do lado do ícone de carrinho */
+    font-size: 20px;
+}
+
